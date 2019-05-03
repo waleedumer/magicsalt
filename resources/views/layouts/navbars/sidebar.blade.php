@@ -6,7 +6,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="{{ route('home') }}">
-            <img src="{{ asset('argon') }}/img/brand/blue.png" class="navbar-brand-img" alt="...">
+            <img src="{{ asset('images') }}/mobile-logo.png " class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
@@ -80,25 +80,38 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('home') }}">
-                        <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
+                        <h2 class="mb-0"><i class="ni ni-tv-2 text-primary"></i></h2> 
+                        <p class="mb-1">Dashboard</p>
+                    </a>
+                </li>
+                <!-- Users -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('user.index') }}">
+                        <h2 class="mb-0"><i class="fa fa-user text-primary"></i></h2> 
+                        <p class="mb-1">Users</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
-                        <i class="fab fa-laravel" style="color: #f4645f;"></i>
-                        <span class="nav-link-text" style="color: #f4645f;">{{ __('Laravel Examples') }}</span>
+                    <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="flase" aria-controls="navbar-examples">
+                    <h2 class="mb-0"><i class="fab fa-laravel" style="color: #f4645f;"></i></h2>
+                        <p class="mb-1">Settings</p>
                     </a>
 
-                    <div class="collapse show" id="navbar-examples">
+                    <div class="collapse sub-links" id="navbar-examples">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('profile.edit') }}">
-                                    {{ __('User profile') }}
+                                    {{ __('Customer Groups') }}
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('user.index') }}">
-                                    {{ __('User Management') }}
+                                    {{ __('Brands') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('user.index') }}">
+                                    {{ __('Product Categories') }}
                                 </a>
                             </li>
                         </ul>
@@ -106,37 +119,41 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="ni ni-planet text-blue"></i> {{ __('Icons') }}
+                    <a class="nav-link" href="{{ route('user.index') }}">
+                        <h2 class="mb-0"><i class="fa fa-user text-primary"></i></h2> 
+                        <p class="mb-1">Customers</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="ni ni-pin-3 text-orange"></i> {{ __('Maps') }}
+                    <a class="nav-link" href="{{ route('user.index') }}">
+                        <h2 class="mb-0"><i class="fa fa-user text-primary"></i></h2> 
+                        <p class="mb-1">Products</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="ni ni-key-25 text-info"></i> {{ __('Login') }}
+                    <a class="nav-link" href="{{ route('user.index') }}">
+                        <h2 class="mb-0"><i class="fa fa-user text-primary"></i></h2> 
+                        <p class="mb-1">Purchase Orders</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="ni ni-circle-08 text-pink"></i> {{ __('Register') }}
+                    <a class="nav-link" href="{{ route('user.index') }}">
+                        <h2 class="mb-0"><i class="fa fa-user text-primary"></i></h2> 
+                        <p class="mb-1">Balance Sheet</p>
                     </a>
                 </li>
-                <li class="nav-item mb-5" style="position: absolute; bottom: 0;">
+                <!-- <li class="nav-item mb-5" style="position: absolute; bottom: 0;">
                     <a class="nav-link" href="https://www.creative-tim.com/product/argon-dashboard-pro-laravel" target="_blank">
                         <i class="ni ni-cloud-download-95"></i> Upgrade to PRO
                     </a>
-                </li>
+                </li> -->
             </ul>
             <!-- Divider -->
-            <hr class="my-3">
+            <!-- <hr class="my-3"> -->
             <!-- Heading -->
-            <h6 class="navbar-heading text-muted">Documentation</h6>
+            <!-- <h6 class="navbar-heading text-muted">Documentation</h6> -->
             <!-- Navigation -->
-            <ul class="navbar-nav mb-md-3">
+            <!-- <ul class="navbar-nav mb-md-3">
                 <li class="nav-item">
                     <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html">
                         <i class="ni ni-spaceship"></i> Getting started
@@ -152,7 +169,8 @@
                         <i class="ni ni-ui-04"></i> Components
                     </a>
                 </li>
-            </ul>
+            </ul> -->
         </div>
     </div>
 </nav>
+

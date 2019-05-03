@@ -6,7 +6,7 @@
     <div class="container-fluid mt--7">
         <div class="row">
             <div class="col-xl-8 mb-5 mb-xl-0">
-                <div class="card bg-gradient-default shadow">
+                <div class="card primary-bg shadow">
                     <div class="card-header bg-transparent">
                         <div class="row align-items-center">
                             <div class="col">
@@ -21,7 +21,7 @@
                                             <span class="d-md-none">M</span>
                                         </a>
                                     </li>
-                                    <li class="nav-item" data-toggle="chart" data-target="#chart-sales" data-update='{"data":{"datasets":[{"data":[0, 20, 5, 25, 10, 30, 15, 40, 40]}]}}' data-prefix="$" data-suffix="k">
+                                    <li class="nav-item text-light" data-toggle="chart" data-target="#chart-sales" data-update='{"data":{"datasets":[{"data":[0, 20, 5, 25, 10, 30, 15, 40, 40]}]}}' data-prefix="$" data-suffix="k">
                                         <a href="#" class="nav-link py-2 px-3" data-toggle="tab">
                                             <span class="d-none d-md-block">Week</span>
                                             <span class="d-md-none">W</span>
