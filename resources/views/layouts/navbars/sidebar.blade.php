@@ -91,7 +91,7 @@
                         <p class="mb-1">Users</p>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" hidden>
                     <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="flase" aria-controls="navbar-examples">
                     <h2 class="mb-0"><i class="fab fa-laravel" style="color: #f4645f;"></i></h2>
                         <p class="mb-1">Settings</p>
