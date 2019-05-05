@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 ---
 deployment:
   tasks:
     - export DEPLOYPATH=/home/markazvip/public_html/
     - /bin/cp -R images $DEPLOYPATH
+=======
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/markazvip/public_html
+    - /bin/cp -r * $DEPLOYPATH
+>>>>>>> 9ae40fc784be422b9bb4636a405807cd3f41fd18
