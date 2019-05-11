@@ -24,6 +24,9 @@
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Dropif -->
+    <link type="text/css" href="{{ asset('dropify') }}/dist/css/dropify.css" rel="stylesheet">
+    <script src="{{ asset('dropify') }}/dist/js/dropify.min.js"></script>
 </head>
 
 <body class="{{ $class ?? '' }}">

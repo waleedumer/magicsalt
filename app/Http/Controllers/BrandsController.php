@@ -7,21 +7,14 @@ use Illuminate\Http\Request;
 
 class BrandsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
-        //
+        $brands = Brands::paginate(20);
+        return view('brands.index', ['brands' => $brands]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function create()
     {
         //
@@ -35,7 +28,11 @@ class BrandsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = [
+            'name' => $request->name
+        ];
+        Brands::create($data);
+        return redirect()->route('brands.index')->withStatus(__('Brand Added Successfuly'));
     }
 
     /**

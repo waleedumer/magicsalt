@@ -80,66 +80,87 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('home') }}">
-                        <h2 class="mb-0"><i class="ni ni-tv-2 text-primary"></i></h2> 
-                        <p class="mb-1">Dashboard</p>
+                        <h2 class="mb-0"><i class="fas fa-desktop text-primary"></i></h2> 
+                        <p class="mb-0">Dashboard</p>
                     </a>
                 </li>
                 <!-- Users -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('user.index') }}">
                         <h2 class="mb-0"><i class="fa fa-user text-primary"></i></h2> 
-                        <p class="mb-1">Users</p>
+                        <p class="mb-0">Users</p>
                     </a>
                 </li>
-                <li class="nav-item" hidden>
+                <li class="nav-item">
                     <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="flase" aria-controls="navbar-examples">
-                    <h2 class="mb-0"><i class="fab fa-laravel" style="color: #f4645f;"></i></h2>
+                    <h2 class="mb-0"><i class="fas fa-sliders-h text-primary"></i></h2>
                         <p class="mb-1">Settings</p>
                     </a>
 
                     <div class="collapse sub-links" id="navbar-examples">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('profile.edit') }}">
-                                    {{ __('Customer Groups') }}
+                                <a class="nav-link" href="{{ route('groups.index') }}">
+                                    {{ __('Groups') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('user.index') }}">
+                                <a class="nav-link" href="{{ route('brands.index') }}">
                                     {{ __('Brands') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('user.index') }}">
-                                    {{ __('Product Categories') }}
+                                <a class="nav-link" href="{{ route('categories.index') }}">
+                                    {{ __('Categories') }}
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </li>
 
+                <li class="nav-item" hidden>
+                    <a class="nav-link" href="{{ route('brands.index') }}">
+                        <h2 class="mb-0"><i class="fas fa-tag "></i></h2> 
+                        <p class="mb-0">Brands</p>
+                    </a>
+                </li>
+
+                <li class="nav-item" hidden>
+                    <a class="nav-link" href="{{ route('groups.index') }}">
+                        <h2 class="mb-0"><i class="fa fa-users "></i></h2> 
+                        <p class="mb-0">Groups</p>
+                    </a>
+                </li>
+
+
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('user.index') }}">
-                        <h2 class="mb-0"><i class="fa fa-user text-primary"></i></h2> 
-                        <p class="mb-1">Customers</p>
+                        <h2 class="mb-0"><i class="fa fa-users "></i></h2> 
+                        <p class="mb-0">Customers</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('products.index') }}">
+                        <h2 class="mb-0"><i class="fas fa-boxes text-primary"></i></h2> 
+                        <p class="mb-0">Products</p>
+                    </a>
+                </li>
+                <li class="nav-item" hidden>
+                    <a class="nav-link" href="{{ route('categories.index') }}">
+                        <h2 class="mb-0"><i class="fas fa-boxes text-primary"></i></h2> 
+                        <p class="mb-0">Category</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('user.index') }}">
-                        <h2 class="mb-0"><i class="fa fa-user text-primary"></i></h2> 
-                        <p class="mb-1">Products</p>
+                        <h2 class="mb-0"><i class="fas fa-shopping-cart "></i></h2> 
+                        <p class="mb-0">Orders</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('user.index') }}">
-                        <h2 class="mb-0"><i class="fa fa-user text-primary"></i></h2> 
-                        <p class="mb-1">Purchase Orders</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('user.index') }}">
-                        <h2 class="mb-0"><i class="fa fa-user text-primary"></i></h2> 
-                        <p class="mb-1">Balance Sheet</p>
+                        <h2 class="mb-0"><i class="fas fa-hand-holding-usd "></i></h2> 
+                        <p class="mb-0">Finance</p>
                     </a>
                 </li>
                 <!-- <li class="nav-item mb-5" style="position: absolute; bottom: 0;">

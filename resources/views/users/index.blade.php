@@ -34,6 +34,7 @@
                                 <tr>
                                     <th scope="col">{{ __('Name') }}</th>
                                     <th scope="col">{{ __('Email') }}</th>
+                                    <th scope="col">{{ __('Group') }}</th>
                                     <th scope="col">{{ __('Creation Date') }}</th>
                                     <th scope="col"></th>
                                 </tr>
@@ -45,6 +46,7 @@
                                         <td>
                                             <a href="mailto:{{ $user->email }}">{{ $user->email }}</a>
                                         </td>
+                                        <td>{{ $user->group['name'] }}</td>
                                         <td>{{ $user->created_at->format('d/m/Y H:i') }}</td>
                                         <td class="text-right">
                                             <div class="dropdown">

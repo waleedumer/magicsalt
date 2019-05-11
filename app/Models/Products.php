@@ -8,16 +8,20 @@ class Products extends Model
 {
     protected $fillable = [
         'name',
-        'product_group',
         'purchase_price',
         'sale_price',
         'purchase_vat',
         'sale_vat',
         'brand_id',
         'category_id',
+        'gallery_image_one',
+        'gallery_image_two',
+        'gallery_image_three',
+        'variation_id',
         'image_url',
         'description',
-        'product_code'
+        'product_code',
+        'on_hand_quantity'
     ];
 
     protected $dates = ['created_at', 'updated_at'];
@@ -27,9 +31,14 @@ class Products extends Model
         return $this->belongsTo(Brands::class, 'brand_id');
     }
 
+    public function variation()
+    {
+        return $this->belongsTo(Variations::class, 'variation_id');
+    }
+
     public function category()
     {
-        return $this->belongsTo(Products::class, 'category_id');
+        return $this->belongsTo(ProductCategories::class, 'category_id');
     }
 }
 

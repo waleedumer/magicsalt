@@ -7,79 +7,58 @@ use Illuminate\Http\Request;
 
 class ProductCategoriesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function index()
     {
-        //
+        $categories = ProductCategories::get();
+        return view('productCategories.index', ['categories' => $categories]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function create()
     {
-        //
+        return view('productCategories.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function store(Request $request)
     {
-        //
+        $data = [
+            'name' => $request->name,
+            'type' => $request->type
+        ];
+        ProductCategories::create($data);
+        return redirect()->route('categories.index')->withStatus(__('Product Category Added Successfuly!'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\ProductCategories  $productCategories
-     * @return \Illuminate\Http\Response
-     */
+    
     public function show(ProductCategories $productCategories)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\ProductCategories  $productCategories
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(ProductCategories $productCategories)
+   
+    public function edit(ProductCategories $productCategories, $id)
     {
-        //
+        $category = ProductCategories::find($id);
+        return view('productCategories.edit', ['category' => $category]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\ProductCategories  $productCategories
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, ProductCategories $productCategories)
+    
+    public function update(Request $request, ProductCategories $productCategories, $id)
     {
-        //
+        $data = [
+            'name' => $request->name,
+            'type' => $request->type
+        ];
+        ProductCategories::where('id', $id)->update($data);
+        return redirect()->route('categories.index')->withStatus(__('Product Category Updated Successfuly!'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\ProductCategories  $productCategories
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(ProductCategories $productCategories)
+    
+    public function destroy(ProductCategories $productCategories, $id)
     {
-        //
+        ProductCategories::where('id', $id)->delete();
+        return redirect()->route('categories.index')->withStatus(__('Product Category Deleted Successfuly!'));
     }
 }

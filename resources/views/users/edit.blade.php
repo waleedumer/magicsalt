@@ -44,6 +44,17 @@
                                         </span>
                                     @endif
                                 </div>
+                                <div class="form-group">
+                                <label class="form-control-label" for="input-email">{{ __('User Group') }}</label>
+                                    <select class="form-control" name="group">
+                                        <option value="{{$user->group['id']}}">{{$user->group['name']}}</option>
+                                        @foreach($groups as $group)
+                                        @if($user->group['id'] !== $group->id)
+                                        <option value="{{$group->id}}">{{$group->name}}</option>
+                                        @endif
+                                        @endforeach
+                                    </select>
+                                </div>
                                 <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-password">{{ __('Password') }}</label>
                                     <input type="password" name="password" id="input-password" class="form-control form-control-alternative{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="{{ __('Password') }}" value="">

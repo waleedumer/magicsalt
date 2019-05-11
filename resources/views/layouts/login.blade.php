@@ -37,7 +37,7 @@
                 padding: 50px 0;
                 height: 100vh;
             }
-                .banner-sec{background:url(https://cdn.pixabay.com/photo/2015/11/17/17/41/salt-lamps-1047941_960_720.jpg)  no-repeat center bottom; background-size:cover; min-height:500px; border-radius: 10px 0 0 10px; padding:0;}
+                .banner-sec{background:url("{{ asset('images')}}/salt-lamps.jpg")  no-repeat center bottom; background-size:cover; min-height:500px; border-radius: 10px 0 0 10px; padding:0;}
                 .container{background:#fff; border-radius: 10px; box-shadow:15px 20px 0px rgba(0,0,0,0.1);}
                 .carousel-inner{border-radius:0 10px 10px 0;}
                 .carousel-caption{text-align:left; left:5%;}

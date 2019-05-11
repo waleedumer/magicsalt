@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Http\Requests\UserRequest;
+use App\Models\Groups;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -16,7 +17,8 @@ class UserController extends Controller
      */
     public function index(User $model)
     {
-        return view('users.index', ['users' => $model->paginate(15)]);
+        $groups = Groups::get();
+        return view('users.index', ['users' => $model->paginate(15), 'groups' => $groups]);
     }
 
     /**
@@ -26,7 +28,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('users.create');
+        $groups = Groups::get();
+        return view('users.create', ['groups' => $groups]);
     }
 
     /**
@@ -38,7 +41,7 @@ class UserController extends Controller
      */
     public function store(UserRequest $request, User $model)
     {
-        $model->create($request->merge(['password' => Hash::make($request->get('password'))])->all());
+        $model->create($request->merge(['password' => Hash::make($request->get('password')),'group_id' => $request->group])->all());
 
         return redirect()->route('user.index')->withStatus(__('User successfully created.'));
     }
@@ -51,7 +54,9 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('users.edit', compact('user'));
+        $groups = Groups::get();
+        // $user = User::with('group')->get();
+        return view('users.edit', compact('user'), compact('groups'));
     }
 
     /**
@@ -64,7 +69,7 @@ class UserController extends Controller
     public function update(UserRequest $request, User  $user)
     {
         $user->update(
-            $request->merge(['password' => Hash::make($request->get('password'))])
+            $request->merge(['password' => Hash::make($request->get('password')),'group_id' => $request->group])
                 ->except([$request->get('password') ? '' : 'password']
         ));
 
