@@ -47,3 +47,12 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::post('groups/store', ['as' => 'groups.store', 'uses' => 'GroupsController@store']);
 	Route::post('groups/create', ['as' => 'groups.create', 'uses' => 'GroupsController@create']);
 });
+
+Route::group(['middleware' => 'auth'], function () {
+	Route::resource('orders', 'OrdersController', ['except' => ['show']]);
+	Route::get('orders/edit/{id}', ['as' => 'orders.edit', 'uses' => 'OrdersController@edit']);
+	Route::post('orders/update/{id}', ['as' => 'orders.update', 'uses' => 'OrdersController@update']);
+	Route::post('orders/destroy/{id}', ['as' => 'orders.destroy', 'uses' => 'OrdersController@destroy']);
+	Route::post('orders/store', ['as' => 'orders.store', 'uses' => 'OrdersController@store']);
+	Route::post('orders/create', ['as' => 'orders.create', 'uses' => 'OrdersController@create']);
+});

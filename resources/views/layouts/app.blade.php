@@ -27,6 +27,12 @@
     <!-- Dropif -->
     <link type="text/css" href="{{ asset('dropify') }}/dist/css/dropify.css" rel="stylesheet">
     <script src="{{ asset('dropify') }}/dist/js/dropify.min.js"></script>
+    <!-- Side Cart -->
+    <link type="text/css" href="{{ asset('css') }}/cart.css" rel="stylesheet">
+    <link type="text/css" href="{{ asset('css') }}/add-to-cart.css" rel="stylesheet">
+    <script src="{{ asset('js') }}/cart.js"></script>
+
+
 </head>
 
 <body class="{{ $class ?? '' }}">

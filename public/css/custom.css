@@ -24,6 +24,10 @@ a.nav-link.active {
     background-color: transparent;
 }
 
+.pro-name{
+    height: 50px;
+}
+
 .primary-bg {
     background-color: #F3A23F !important;
 }
@@ -36,6 +40,40 @@ a.nav-link.active {
     display: block;
     margin: 0 !important;
     content: '';
+}
+
+span.quantity {
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.buy-button {
+    background: #f3a23f;
+    border-color: #f3a23f;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.price{
+    font-weight: 800;
+    border-bottom: solid;
+    border-width: 3px;
+    border-color: #f3a23f
+}
+
+.product-img {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    height: 230px;
+    background-position: center !important;
+}
+
+span.space {
+    flex: 1;
+}
+
+.main-content .navbar-top{
+    z-index: 4 !important;
 }
 
 #sidenav-collapse-main li.nav-item {
@@ -73,6 +111,28 @@ a.nav-link::after {
     position: absolute;
     right: 10px;
     margin-top: 4px;
+}
+
+
+
+.footer {
+    padding: 2.5rem 0;
+    background: #eeeff7;
+}
+
+p.cd-price.m-0.p-0 {
+    position: absolute;
+    bottom: 5%;
+    right: 8%;
+    font-size: 16px;
+    color: black !important;
+    font-weight: 600;
+}
+
+a.cd-item-remove.cd-img-replace {
+    top: 15% !important;
+    right: 2% !important;
+    opacity: 0.2;
 }
 
 @media (min-width: 768px) {

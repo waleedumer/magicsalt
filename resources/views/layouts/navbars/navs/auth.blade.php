@@ -19,6 +19,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="media align-items-center">
+                    
                         <span class="avatar avatar-sm rounded-circle">
                             <img alt="Image placeholder" src="{{ asset('argon') }}/img/theme/team-4-800x800.jpg">
                         </span>
@@ -55,6 +56,29 @@
                     </a>
                 </div>
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link px-3" href="#">
+                    <div class="media align-items-center cart" id="cd-cart-trigger">
+                        <i class="fas fa-shopping-cart"></i><span></span>
+                    </div>
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
+
+<!-- Cart Side -->
+<div id="cd-shadow-layer"></div>
+<div id="cd-cart">
+		<h2>Cart</h2>
+		<ul class="cd-cart-items">
+		
+		</ul> <!-- cd-cart-items -->
+		<div class="cd-cart-total">
+			<p>Total <span>0</span></p>
+		</div> <!-- cd-cart-total -->
+		<a href="#0" class="checkout-btn">Checkout</a>
+	</div>
+<script>
+
+</script>

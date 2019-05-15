@@ -33,6 +33,7 @@ class ProductsController extends Controller
     {
         $folder = 'public/images';
         $coverImage = 0;
+        $extensionCover = 0;
         if($request->file('coverImage') !== null){
             $coverImage = str_random(10);
             $extensionCover = $request->file('coverImage')->getClientOriginalName();
@@ -40,6 +41,7 @@ class ProductsController extends Controller
         }
 
         $imageOne = 0;
+        $extensionOne = 0;
         if($request->file('imageOne') !== null){
             $imageOne = str_random(10);
             $extensionOne = $request->file('imageOne')->getClientOriginalName();
@@ -47,6 +49,7 @@ class ProductsController extends Controller
         }
 
         $imageTwo = 0;
+        $extensionTwo = 0;
         if($request->file('imageTwo') !== null){
             $imageTwo = str_random(10);
             $extensionTwo = $request->file('imageTwo')->getClientOriginalName();
@@ -54,6 +57,7 @@ class ProductsController extends Controller
         }
 
         $imageThree = 0;
+        $extensionThree = 0;
         if($request->file('imageThree') !== null){
             $imageThree = str_random(10);
             $extensionThree = $request->file('imageThree')->getClientOriginalName();
